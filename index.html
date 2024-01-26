@@ -20,6 +20,7 @@ and open the template in the editor.
                 if ((lletra >= "a") && (lletra <= "l")) {   
                 text="Aquesta lletra es correcta";
                 window.alert("És Correcta")
+                document.getElementById("paraula").innerHTML=document.getElementById("paraula").innerHTML+lletra;
                
                
                } 
@@ -27,6 +28,7 @@ and open the template in the editor.
                 {
                         text = "Aquesta lletra es Incorrecta";
                           window.alert("És incorrecta")
+                          vides=vides -1;
                           document.getElementById("vides").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
 
                       }
@@ -45,9 +47,9 @@ and open the template in the editor.
 
 
     <h2>Paraula</h2>
-    <p>------</p>
+    <p id="paraula">------</p>
     <h2>Vides</h2>
-    <p>‎ ‎ ‎ ‎ 7</p>
+    <p id="vides">‎ ‎ ‎ ‎ 7</p>
     <h2>Lletres</h2>
     <p>z z z z z z</p>
 
