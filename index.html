@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script>
+              var vides=7
+            
+            function Comprobar() {
+
+              var lletra=document.getElementById("caracter").value;
+              
+                if ((lletra >= "a") && (lletra <= "l")) {   
+                text="Aquesta lletra es correcta";
+                window.alert("És Correcta")
+               
+               
+               } 
+                else 
+                {
+                        text = "Aquesta lletra es Incorrecta";
+                          window.alert("És incorrecta")
+                          document.getElementById("vides").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
+
+                      }
+                  
+    }
+
+            
+        </script>
+    </head>    
+    <body>
+        <h1>Prototip Joc del penjat</h1>
+    </body>
+
+    <input id="caracter"type="text" placeholder="Escriu una lletra minúscula">
+    <button onclick="Comprobar()">comprobar</button>
+
+
+    <h2>Paraula</h2>
+    <p>------</p>
+    <h2>Vides</h2>
+    <p>‎ ‎ ‎ ‎ 7</p>
+    <h2>Lletres</h2>
+    <p>z z z z z z</p>
+
+    <h4>Crédits:<a href="https://prosselloe.wordpress.com/">Pere Miquel Rosselló Espases</a></h4>
+</html>
