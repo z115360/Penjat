@@ -17,11 +17,38 @@ and open the template in the editor.
 
               var lletra=document.getElementById("caracter").value;
               
-                if ((lletra >= "a") && (lletra <= "l")) {   
+                lletra=lletra.toLowerCase();
+                    switch (lletra) {
+                         case "à":
+                         case "á":
+                            lletra = "a";
+                            break;
+                         case "è":
+                         case "é":
+                            lletra = "e";
+                            break;
+                         case "ì":
+                         case "í":
+                         case "ï":
+                             lletra = "i";
+                             break;
+                         case "ò":
+                         case "ó":
+                             lletra = "o";
+                             break;
+                         case "ù":
+                         case "ú":
+                         case "ü":
+                             lletra = "u";
+                             break;
+ 
+                    }
+                if ((lletra >= "a") && (lletra <= "l") || (lletra =="ç") || (lletra=="ñ"))
+                
+        {   
                 text="Aquesta lletra es correcta";
                 window.alert("És Correcta")
                 document.getElementById("paraula").innerHTML=document.getElementById("paraula").innerHTML+lletra;
-               
                
                } 
                 else 
@@ -30,7 +57,7 @@ and open the template in the editor.
                           window.alert("És incorrecta")
                           vides=vides -1;
                           document.getElementById("vides").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
-
+                          document.getElementById("lletres").innerHTML=document.getElementById("lletres").innerHTML+lletra;
                       }
                   
     }
@@ -51,7 +78,7 @@ and open the template in the editor.
     <h2>Vides</h2>
     <p id="vides">‎ ‎ ‎ ‎ 7</p>
     <h2>Lletres</h2>
-    <p>z z z z z z</p>
+    <p>------</p>
 
     <h4>Crédits:<a href="https://prosselloe.wordpress.com/">Pere Miquel Rosselló Espases</a></h4>
 </html>
