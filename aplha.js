@@ -52,6 +52,7 @@
                         text = "Aquesta lletra es Incorrecta";
                           window.alert("És incorrecta")
                           vides=vides -1;
+                          MostraImg();
                           document.getElementById("vides").innerHTML = 
                                   "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
                           document.getElementById("lletres").innerHTML =
