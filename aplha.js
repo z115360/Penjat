@@ -38,16 +38,17 @@
                              break;
  
                     }
-                if (((lletra >= "a") && (lletra <= "l")) || (lletra =="ç") || (lletra=="ñ"))
+                if (((lletra >= "a") && (lletra <= "l")) || (lletra =="ç") )
                 
                 {   
                 text="Aquesta lletra es correcta";
-                window.alert("És Correcta")
+                window.alert("És Correcta");
                 document.getElementById("paraula").innerHTML=
-                        document.getElementById("paraula").innerHTML+lletra;
+                document.getElementById("paraula").innerHTML+lletra;
+                document.getElementById("miau").play();
                
                } 
-                else 
+                else if (((lletra >= "m") && (lletra <= "z")) || (lletra=="ñ"))
                 {
                         text = "Aquesta lletra es Incorrecta";
                           window.alert("És incorrecta")
@@ -56,18 +57,33 @@
                           document.getElementById("vides").innerHTML = 
                                   "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
                           document.getElementById("lletres").innerHTML =
-                                  document.getElementById("lletres").innerHTML+lletra;
+                          document.getElementById("lletres").innerHTML+lletra;
+                          document.getElementById("boom_cloud").play();
+
+
                 }
+                
+                
+                else {
+                    
+                window.alert("Caràcter incorrecte");
+            }
+                
               if(vides <=0){
                   window.alert("i has perdut");
+                  document.getElementById("cat-fight").play();
+
                   AturaTot();
               
               }else         {
                   if (paraula.length >= 14)  {
                       window.alert("i has guanyat");
+                      document.getElementById("cheer").play();
+
                       AturaTot();
                   }
-              }
+              } document.getElementById("clock_ticking").play();
+
               function AturaTot(){
                  document.getElementById("cara").disabled =true;
                  document.getElementById("caracter").disabled =true;
@@ -135,6 +151,9 @@
                  document.getElementById("ahorcado_5").hidden=true;
                  document.getElementById("ahorcado_6").hidden=true;
             }
+            
+ 
+            
 
                
 
