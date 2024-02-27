@@ -152,6 +152,20 @@
                  document.getElementById("ahorcado_6").hidden=true;
             }
             
+{
+    var seconds=0;
+	     		function timer(){
+
+			seconds=seconds+1;
+
+			document.getElementById("counter").innerHTML=seconds;
+
+
+
+	   	  }
+	     		setInterval(timer,1000);
+	
+}
  
             
 
