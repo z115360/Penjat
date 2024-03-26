@@ -4,13 +4,14 @@
  * and open the template in the editor.
  */  
     var vides=7
-    var Encerts = []; //bones
-    var Fallat=["_","_","_","_","_","_","_"]; //errades
+    var Paraula = []; //bones
+    var Lletres=["_","_","_","_","_","_","_"]; //errades
      
     //Llista de paraules per al joc i les pistes asociades
     var paraules=["cordes","fetge","forca","jutges","jutjat","mengen","penjat","quinte","setze"];
     var pistes=["A la quinta forca", "A ca un penjat,ni hi anomenis cordes", "Setze jutges d'un jutjat mengen fetge d'un penjat"];
     var paraulespistes=[1,2,0,2,2,2,1,0,2];
+    
     //Escuull una paraula aleatòriament
     var aleatori=Math.floor(Math.random() * paraules.length);
     var paraula=paraules[aleatori];
@@ -19,7 +20,7 @@
 
     //Marcam cada lletra amb un "_"
     for(var i=0; i < paraula.length; i++) {
-        Encerts[i]= "_" ;
+        Paraula[i]= "_" ;
     }
         
         
@@ -55,38 +56,41 @@ function Comprobar() {
             break;
 
     }
+    
+    //alert(paraula);
     var pos = paraula.indexOf(lletra);
 
     if ((pos != -1) && (lletra != "")) {
         // text="Aquesta lletra es correcta";
         window.alert("És Correcta");
 
-        // document.getElementById("Encerts").innerHTML=
-        // document.getElementById("Encerts").innerHTML+lletra;
-
+      //  document.getElementById("Paraula").innerHTML=
+     //  document.getElementById("Paraula").innerHTML+lletra;
         document.getElementById("miau").play();
         for (var i = pos; i < paraula.length; i++) {
             if (paraula[i] == lletra) {
-                Encerts[i] = lletra;
+                Paraula[i] = lletra;
             }
-        }
-        document.getElementById("Encerts").innerHTML = Encerts;
+        }        
+        document.getElementById("Paraula").innerHTML = Paraula;
 
     } else if (((lletra >= "a") && (lletra <= "z")) ||
             (lletra == "ñ") || (lletra == "-") ||
             (lletra == "ç") || (lletra == ".")) {
         window.alert("És incorrecta")
         document.getElementById("boom_cloud").play();
-        Fallat[7 - Vides] = lletra;
-        document.getElementById("lletres").innerHTML = Fallat;
+        
+        Lletres[7 - vides] = lletra;
+        document.getElementById("Lletres").innerHTML = Lletres;
+               // alert(Lletres);
 
         // text = "Aquesta lletra es Incorrecta";
         vides = vides - 1;
         MostraImg();
         document.getElementById("vides").innerHTML =
                 "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
-        //  document.getElementById("Fallat").innerHTML =
-        //  document.getElementById("Fallat").innerHTML+lletra;
+        //  document.getElementById("Lletres").innerHTML =
+        //  document.getElementById("Lletres").innerHTML+lletra;
         //  document.getElementById("boom_cloud").play();
 
 
@@ -100,7 +104,8 @@ function Comprobar() {
         document.getElementById("cat-fight").play();
         AturaTot();
     } else {
-        if (paraula.length >= 14) {
+        //if (paraula.length >= 14) {
+        if (Paraula.indexOf("_")== -1) {
             window.alert("i has guanyat");
             document.getElementById("cheer").play();
             AturaTot();
