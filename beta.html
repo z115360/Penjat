@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="aplha_penjat_css.css">   
+        <script src="beta.js"></script>
+    </head>    
+    <body 
+        
+        onload='document.getElementById("mystery").play(); amaga();'
+        
+        style="background-image: url('img/Desert Actualizada.png');
+          background-image:5px 5px; background-repeat: no-repeat">
+        
+      
+        
+    <center>
+
+        <h1>Prototip Joc del penjat</h1>
+        <h2 id="counter" >0</h2>
+
+            
+    <input id="caracter" type="text" placeholder="Escriu una lletra minúscula" maxlength="1" />
+    <button id="cara" onclick="Comprobar()">comprobar</button>
+    
+
+    <h2>Paraula</h2>
+    <p id="Paraula">_ _ _ _ _ _ _</p>
+    <h2>Vides</h2>
+    <p id="vides">‎ ‎ ‎ ‎ 7</p>
+    <h2>Lletres</h2>
+    <p id="Lletres">_ _ _ _ _ _ _</p>
+
+    <h4>Crédits:<a href="https://prosselloe.wordpress.com/">Pere Miquel Rosselló Espases</a></h4>
+    </center>
+    <div>
+        <center>
+        <img src="img/ahorcado_6.png" id="ahorcado_6" style="widht:280px;height:270px;"
+             title="Et queden 6 vides!">
+         <img src="img/ahorcado_5.png" id="ahorcado_5" style="widht:280px;height:270px;"
+             title="Et queden 5 vides!">
+         <img src="img/ahorcado_4.png" id="ahorcado_4" style="widht:280px;height:270px;"
+             title="Et queden 4 vides!">
+         <img src="img/ahorcado_3.png" id="ahorcado_3" style="widht:280px;height:270px;"
+             title="Et queden 3 vides!">
+         <img src="img/ahorcado_2.png" id="ahorcado_2" style="widht:280px;height:270px;"
+             title="Et queden 2 vides!">
+         <img src="img/ahorcado_1.png" id="ahorcado_1" style="widht:280px;height:270px;"
+             title="Et queda 1 vida!">
+          <img src="img/ahorcado_0.png" id="ahorcado_0" style="widht:280px;height:270px;"
+             title="Et queden 0 vides!">
+          </center>
+    </div>  
+   
+    <a href='https://aesthetic--semolina--590adb-netlify-app.translate.goog/?_x_tr_sl=es&_x_tr_tl=ca&_x_tr_hl=es&_x_tr_pto=wapp'> <img src="img/es.png" alt=""/></a>    
+    <div id="Audios">      
+        <audio id="mystery">      <source src="aud/mystery.mp3" type="audio/mpeg" ></audio>
+        <audio id="miau">         <source src="aud/miau.mp3" type="audio/mpeg" ></audio>
+        <audio id="clock_ticking">      <source src=src="aud/clock_ticking.mp3" type="audio/mpeg" ></audio>
+        <audio id="cheer">         <source src="aud/cheer.mp3" type="audio/mpeg" ></audio>
+       <audio id="cat-fight">      <source src="aud/cat-fight.mp3" type="audio/mpeg"></audio>
+        <audio id="boom_cloud">         <source src="aud/boom_cloud.mp3" type="audio/mpeg" ></audio>
+        <audio id="bell_toll_x3">      <source src="aud/bell_toll_x3.mp3" type="audio/mpeg" ></audio>
+        <audio id="bell_toll">         <source src="aud/bell_toll.mp3" type="audio/mpeg" ></audio>
+        
+       
+    </div> 
+    </body>    
+</html>
